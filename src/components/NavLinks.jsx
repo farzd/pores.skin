@@ -14,6 +14,7 @@ export function NavLinks({ footer = false }) {
     links = [
       ['Terms and conditions', '/terms.html'],
       ['Privacy policy', '/privacy.html'],
+      ['Contact Us', 'mailto:support@pores.skin'],
     ]
   }
 
