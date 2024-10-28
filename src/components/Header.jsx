@@ -8,7 +8,7 @@ import {
   PopoverPanel,
 } from '@headlessui/react'
 import { AnimatePresence, motion } from 'framer-motion'
-
+import logoPores from '@/images/pores-logo.jpg'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
@@ -56,14 +56,21 @@ export function Header() {
       <nav>
         <Container className="relative z-50 flex justify-between py-8">
           <div className="relative z-10 flex items-center gap-16">
-            <Link href="/" aria-label="Home">
-              <Logo className="h-10 w-auto" />
+            <Link
+              href="/"
+              aria-label="Home"
+              className="flex items-center gap-2"
+            >
+              <img src={logoPores.src} alt="Pores Logo" className="h-10 w-10" />{' '}
+              <h1 className="text-3xl font-medium tracking-tight text-gray-900">
+                Pores
+              </h1>
             </Link>
-            <div className="hidden lg:flex lg:gap-10">
+            {/* <div className="hidden lg:flex lg:gap-10">
               <NavLinks />
-            </div>
+            </div> */}
           </div>
-          <div className="flex items-center gap-6">
+          {/* <div className="flex items-center gap-6">
             <Popover className="lg:hidden">
               {({ open }) => (
                 <>
@@ -127,13 +134,13 @@ export function Header() {
                 </>
               )}
             </Popover>
-            <Button href="/login" variant="outline" className="hidden lg:block">
+             <Button href="/login" variant="outline" className="hidden lg:block">
               Log in
             </Button>
             <Button href="#" className="hidden lg:block">
               Download
-            </Button>
-          </div>
+            </Button> 
+          </div> */}
         </Container>
       </nav>
     </header>

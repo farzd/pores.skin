@@ -4,16 +4,20 @@ import { useRef, useState } from 'react'
 import Link from 'next/link'
 import { AnimatePresence, motion } from 'framer-motion'
 
-export function NavLinks() {
+export function NavLinks({ footer = false }) {
   let [hoveredIndex, setHoveredIndex] = useState(null)
   let timeoutRef = useRef(null)
 
-  return [
-    ['Features', '/#features'],
-    ['Reviews', '/#reviews'],
-    ['Pricing', '/#pricing'],
-    ['FAQs', '/#faqs'],
-  ].map(([label, href], index) => (
+  let links = []
+
+  if (footer) {
+    links = [
+      ['Terms and conditions', '/terms.html'],
+      ['Privacy policy', '/privacy.html'],
+    ]
+  }
+
+  return links.map(([label, href], index) => (
     <Link
       key={label}
       href={href}

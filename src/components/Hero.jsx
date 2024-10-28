@@ -7,6 +7,7 @@ import { AppStoreLink } from '@/components/AppStoreLink'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { PhoneFrame } from '@/components/PhoneFrame'
+import phoneDemo from '@/images/screenshot.jpg'
 import logoBbc from '@/images/logos/bbc.svg'
 import logoCbs from '@/images/logos/cbs.svg'
 import logoCnn from '@/images/logos/cnn.svg'
@@ -46,8 +47,8 @@ function BackgroundIllustration(props) {
             y2="1025"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#06b6d4" />
-            <stop offset="1" stopColor="#06b6d4" stopOpacity="0" />
+            <stop stopColor="#ABCDFE" />
+            <stop offset="1" stopColor="#ABCDFE" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>
@@ -76,8 +77,8 @@ function BackgroundIllustration(props) {
             y2="913"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#06b6d4" />
-            <stop offset="1" stopColor="#06b6d4" stopOpacity="0" />
+            <stop stopColor="#ABCDFE" />
+            <stop offset="1" stopColor="#ABCDFE" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>
@@ -105,34 +106,54 @@ export function Hero() {
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
             <h1 className="text-4xl font-medium tracking-tight text-gray-900">
-              Invest at the perfect time.
+              Unlock Your Best Skin Yet.
             </h1>
             <p className="mt-6 text-lg text-gray-600">
-              By leveraging insights from our network of industry insiders,
-              you’ll know exactly when to buy to maximize profit, and exactly
-              when to sell to avoid painful losses.
+              Through expert analysis and AI-driven recommendations, achieve
+              your skincare goals with routines tailored to your unique skin
+              profile.
             </p>
+
+            <ul className="mt-4 text-base">
+              <li className="flex items-center">
+                <span className="mb-3 text-lg text-gray-600">
+                  ✓ Scan your photo for skin concerns
+                </span>
+              </li>
+              <li className="flex items-center">
+                <span className="mb-3 text-lg text-gray-600">
+                  ✓ Personalised routine for your skin profile{' '}
+                </span>
+              </li>
+              <li className="flex items-center">
+                <span className="mb-3 text-lg text-gray-600">
+                  ✓ Get product recommendations for your skin
+                </span>
+              </li>
+            </ul>
+
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
               <AppStoreLink />
-              <Button
+              {/* <Button
                 href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                 variant="outline"
               >
                 <PlayIcon className="h-6 w-6 flex-none" />
                 <span className="ml-2.5">Watch the video</span>
-              </Button>
+              </Button> */}
             </div>
           </div>
           <div className="relative mt-10 sm:mt-20 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6">
             <BackgroundIllustration className="absolute left-1/2 top-4 h-[1026px] w-[1026px] -translate-x-1/3 stroke-gray-300/70 [mask-image:linear-gradient(to_bottom,white_20%,transparent_75%)] sm:top-16 sm:-translate-x-1/2 lg:-top-16 lg:ml-12 xl:-top-14 xl:ml-0" />
             <div className="-mx-4 h-[448px] px-9 [mask-image:linear-gradient(to_bottom,white_60%,transparent)] sm:mx-0 lg:absolute lg:-inset-x-10 lg:-bottom-20 lg:-top-10 lg:h-auto lg:px-0 lg:pt-10 xl:-bottom-32">
               <PhoneFrame className="mx-auto max-w-[366px]" priority>
-                <AppDemo />
+                {/* <AppDemo /> */}
+                <img src={phoneDemo.src} alt="Phone Demo" className="-mt-14" />
               </PhoneFrame>
             </div>
           </div>
           <div className="relative -mt-4 lg:col-span-7 lg:mt-0 xl:col-span-6">
-            <p className="text-center text-sm font-semibold text-gray-900 lg:text-left">
+            {/* <p className="text-center text-sm font-semibold text-gray-900 lg:text-left">
               As featured in
             </p>
             <ul
@@ -153,7 +174,7 @@ export function Hero() {
                   <Image src={logo} alt={name} className="h-8" unoptimized />
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </div>
         </div>
       </Container>

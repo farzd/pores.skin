@@ -4,10 +4,10 @@ import clsx from 'clsx'
 export function AppStoreLink({ color = 'black' }) {
   return (
     <Link
-      href="#"
+      href="https://apps.apple.com/gb/app/id6737216149"
       aria-label="Download on the App Store"
       className={clsx(
-        'rounded-lg transition-colors',
+        'cursor-pointer rounded-lg transition-colors',
         color === 'black'
           ? 'bg-gray-800 text-white hover:bg-gray-900'
           : 'bg-white text-gray-900 hover:bg-gray-50',
