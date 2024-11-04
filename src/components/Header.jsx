@@ -54,15 +54,19 @@ export function Header() {
   return (
     <header>
       <nav>
-        <Container className="relative z-50 flex justify-between py-8">
+        <Container className="relative z-50 flex justify-between py-8 pb-4 sm:pb-8">
           <div className="relative z-10 flex items-center gap-16">
             <Link
               href="/"
               aria-label="Home"
               className="flex items-center gap-2"
             >
-              <img src={logoPores.src} alt="Pores Logo" className="h-10 w-10" />{' '}
-              <h1 className="text-3xl font-medium tracking-tight text-gray-900">
+              <img
+                src={logoPores.src}
+                alt="Pores Logo"
+                className="h-6 w-6 sm:h-10 sm:w-10"
+              />{' '}
+              <h1 className="text-2xl font-medium tracking-tight text-gray-900 sm:text-3xl">
                 Pores
               </h1>
             </Link>
