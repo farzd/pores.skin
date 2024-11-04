@@ -7,7 +7,7 @@ import { AppStoreLink } from '@/components/AppStoreLink'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { PhoneFrame } from '@/components/PhoneFrame'
-import phoneDemo from '@/images/screenshot.jpg'
+import phoneDemo from '@/images/screenshot-new.jpg'
 import logoBbc from '@/images/logos/bbc.svg'
 import logoCbs from '@/images/logos/cbs.svg'
 import logoCnn from '@/images/logos/cnn.svg'
@@ -101,11 +101,11 @@ function PlayIcon(props) {
 
 export function Hero() {
   return (
-    <div className="overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36">
+    <div className="overflow-hidden lg:pb-20 lg:pt-16">
       <Container>
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
-            <h1 className="text-4xl font-medium tracking-tight text-gray-900">
+            <h1 className="text-3xl font-medium tracking-tight text-gray-900 sm:text-4xl">
               Unlock Your Best Skin Yet.
             </h1>
             <p className="mt-6 text-lg text-gray-600">
@@ -132,7 +132,7 @@ export function Hero() {
               </li>
             </ul>
 
-            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
+            <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-4 md:justify-start">
               <AppStoreLink />
               {/* <Button
                 href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
@@ -143,12 +143,15 @@ export function Hero() {
               </Button> */}
             </div>
           </div>
-          <div className="relative mt-10 sm:mt-20 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6">
+          <div className="relative mt-10 sm:mt-20 lg:col-span-5 lg:row-span-3 lg:mt-0 xl:col-span-6">
             <BackgroundIllustration className="absolute left-1/2 top-4 h-[1026px] w-[1026px] -translate-x-1/3 stroke-gray-300/70 [mask-image:linear-gradient(to_bottom,white_20%,transparent_75%)] sm:top-16 sm:-translate-x-1/2 lg:-top-16 lg:ml-12 xl:-top-14 xl:ml-0" />
-            <div className="-mx-4 h-[448px] px-9 [mask-image:linear-gradient(to_bottom,white_60%,transparent)] sm:mx-0 lg:absolute lg:-inset-x-10 lg:-bottom-20 lg:-top-10 lg:h-auto lg:px-0 lg:pt-10 xl:-bottom-32">
-              <PhoneFrame className="mx-auto max-w-[366px]" priority>
+            <div className="-mx-4 h-[448px] px-9 [mask-image:linear-gradient(to_bottom,white_70%,transparent)] sm:mx-0 lg:absolute lg:-inset-x-10 lg:-bottom-20 lg:-top-10 lg:h-auto lg:px-0 lg:pt-10 xl:-bottom-32">
+              <PhoneFrame
+                className="mx-auto max-w-[280px] lg:max-w-[366px] xl:max-w-[366px]"
+                priority
+              >
                 {/* <AppDemo /> */}
-                <img src={phoneDemo.src} alt="Phone Demo" className="-mt-14" />
+                <img src={phoneDemo.src} alt="Pores Demo" className="-mt-28" />
               </PhoneFrame>
             </div>
           </div>
