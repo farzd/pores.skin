@@ -67,7 +67,7 @@ export function Header() {
                 className="h-6 w-6 sm:h-10 sm:w-10"
               />{' '}
               <h1 className="text-2xl font-medium tracking-tight text-gray-900 sm:text-3xl">
-                Pores
+                Glow AI
               </h1>
             </Link>
             {/* <div className="hidden lg:flex lg:gap-10">
